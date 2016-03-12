@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingBottom="@dimen/fivedp"
+    android:paddingLeft="@dimen/fivedp"
+    android:paddingRight="@dimen/fivedp"
+    android:paddingTop="@dimen/fivedp"
+    android:layout_margin="10dp"
+    android:background="@drawable/customshape"
+    >
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_mini"
+
+        android:paddingRight="@dimen/fivedp"
+      />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurant Name"
+        android:textColor="#2c3e50"
+        android:typeface="serif"
+        android:id="@+id/Rname"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imageView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurant Address"
+        android:textColor="#2c3e50"
+        android:typeface="serif"
+        android:id="@+id/Addr"
+        android:paddingTop="@dimen/fivedp"
+        android:layout_below="@+id/ratingBar"
+        android:layout_toEndOf="@+id/imageView3" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurant Rating"
+        android:textColor="#2c3e50"
+        android:typeface="serif"
+        android:id="@+id/Rating"
+        android:layout_alignTop="@+id/ratingBar"
+        android:layout_toEndOf="@+id/imageView3" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurant Type"
+        android:textColor="#2c3e50"
+        android:typeface="serif"
+        android:id="@+id/type"
+        android:paddingTop="@dimen/fivedp"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/imageView3"
+        android:layout_alignStart="@+id/Addr" />
+
+
+
+
+        <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:numStars="5"
+
+        style="@style/foodRatingBar"
+            android:layout_marginEnd="43dp"
+            android:layout_above="@+id/type"
+            android:layout_alignParentEnd="true" />
+
+
+
+</RelativeLayout>

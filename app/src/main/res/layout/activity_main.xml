@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:layout_gravity="center"
+    tools:context="info.theh2o.rahul.findine.MainActivity">
+
+
+
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg"
+
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cloud"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="51dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cloud"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_alignParentStart="true" />
+
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FinDine"
+            android:textColor="@color/bg"
+            android:typeface="serif"
+            android:id="@+id/textView"
+            android:layout_marginTop="163dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+
+    <com.mypopsy.widget.FloatingSearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="190dp"
+        android:background="#90000000"
+        android:hint="Search Restaurant..."
+
+       app:fsv_icon="@drawable/ic_search_black_24dp"
+        app:theme="@style/CustomFloatingSearchViewTheme"
+
+        />
+
+
+
+</RelativeLayout>
