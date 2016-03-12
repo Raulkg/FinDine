@@ -37,8 +37,8 @@ Download the apk and run it directly .
 
 ## API Reference
 
-Floating search view 
-nineoldanimation library
+Floating search view ;
+nineoldanimation library;
 
 ## Tests
 
