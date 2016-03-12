@@ -3,8 +3,10 @@ Android Application for the Restaurant search in city
 
 ## Synopsis
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
-
+simple application that provides an intuitive interface to accomplishes the following tasks:
+User enters a city in a search box and searches for restaurants in that city.
+User sees results in a list view with restaurant name, address, rating, and type.
+data from the Factual API (https://www.factual.com). 
 
 
 ## Motivation
@@ -16,6 +18,22 @@ Querying the data was fun with this API .
 ## Installation
 
 Download the apk and run it directly .
+
+
+## Features: 
+
+1.This Application uses factual android driver to make web request to get data .
+2. Uses nice styled list view.
+3.Floating Search View Implemented
+4.Implementing parceable class demonstrated.
+
+## Tools Used:
+1.Genymotion
+2.AndroidArsenal- free libraries
+3.photoshop
+4.https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html
+
+
 
 ## API Reference
 
@@ -49,11 +67,6 @@ limitations under the License.
 
 
 
-Features: 
-1.This Application uses factual android driver to make web request to get data .
-2. Uses nice styled list view.
-3.Floating Search View Implemented
-4.Implementing parceable class demonstrated.
 
 
 
