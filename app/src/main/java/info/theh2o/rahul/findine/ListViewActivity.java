@@ -1,5 +1,9 @@
 package info.theh2o.rahul.findine;
-
+//
+//        Heading  : FinDine Andorid Application
+//        Author.  : Rahulkumar Gaddam
+//        Purpose. : To find the restaurants in the city
+//       This is our second activity where the listview displays our data
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;

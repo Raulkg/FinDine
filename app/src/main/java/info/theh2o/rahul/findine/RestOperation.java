@@ -1,5 +1,9 @@
 package info.theh2o.rahul.findine;
-
+//
+//        Heading  : FinDine Andorid Application
+//        Author.  : Rahulkumar Gaddam
+//        Purpose. : To find the restaurants in the city
+//        This is the main file that interacts with the Factual API
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -28,10 +32,13 @@ public class RestOperation extends AsyncTask<Query, Integer, List<ReadResponse>>
     private TextView resultText = null;
     private List<Map<String,?>> restList =  new ArrayList<Map<String,?>>();
 
+    //Function to get the Array list
     public List<Map<String, ?>> getRestList() {
         return restList;
     }
 
+
+    //Function to get the size of the array list
     public int getSize(){
         return restList.size();
     }
@@ -78,14 +85,14 @@ public class RestOperation extends AsyncTask<Query, Integer, List<ReadResponse>>
                     System.out.println(key+", "+restaurant.get(key));
                 }
 
-
+                // adding created restaurant map object to the restList ArrayList of Map Objects
                 restList.add(restaurant);
 
 
             }
         }
-       // resultText.setText(sb.toString());
 
+//delegate that trasnfers the data
             delegate.processFinish(restList);
 
         Log.d("check", sb.toString());

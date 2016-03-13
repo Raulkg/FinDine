@@ -1,5 +1,9 @@
 package info.theh2o.rahul.findine;
-
+//
+//        Heading  : FinDine Andorid Application
+//        Author.  : Rahulkumar Gaddam
+//        Purpose. : To find the restaurants in the city
+//        This is the Adapter class used to load our data in the listview
 import android.content.Context;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;

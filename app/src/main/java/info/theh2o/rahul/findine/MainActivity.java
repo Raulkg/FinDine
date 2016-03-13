@@ -1,3 +1,11 @@
+
+//
+//        Heading  : FinDine Andorid Application
+//        Author.  : Rahulkumar Gaddam
+//        Purpose. : To find the restaurants in the city
+//        This is the main activity where the main screen deploys Search view bar and have handlers to load ListView Activity
+
+
 package info.theh2o.rahul.findine;
 
 import android.content.Intent;
@@ -41,18 +49,20 @@ public class MainActivity extends AppCompatActivity implements AsyncResponse {
     private boolean flag = true;
     private boolean mflag = true;
 
-    private int mInterval = 10000; // 5 seconds by default, can be changed later
+    private int mInterval = 10000;
     private Handler mHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //font file to change the fonts of the texview
         Typeface tf = Typeface.createFromAsset(getAssets(),"fonts/Caviar_Dreams_Bold.ttf");
         TextView tv = (TextView) findViewById(R.id.textView);
         tv.setTypeface(tf);
         mHandler = new Handler();
         startRepeatingTask();
-
+        //Custom floating searchview
         searchView = (FloatingSearchView)findViewById(R.id.search);
 
         if (searchView != null) {
@@ -98,9 +108,12 @@ public class MainActivity extends AppCompatActivity implements AsyncResponse {
 
 
     }
+
+    //Function that creates restoperation object and gets data from it
     public void callWebService(String q) {
 if(mflag) {
 
+    //Included java driver of the factual api - Query method
     Query query = new Query();
 
      new RestOperation(new AsyncResponse() {
@@ -123,7 +136,7 @@ if(mflag) {
                  arr = arr.replace("[","");
                  arr = arr.replace("]","");
                  arr = arr.replace("\"","");
-
+                 //Creating dine objects to transfer data to other activity
                  Dine d1 = new Dine(name,address,rating1,arr);
                  intent1.putExtra("Data"+i,d1);
              }
@@ -148,10 +161,9 @@ Runnable mStatusChecker = new Runnable() {
         @Override
         public void run() {
             try {
-                updateStatus(); //this function can change value of mInterval.
+                updateStatus();
             } finally {
-                // 100% guarantee that this always happens, even if
-                // your update method throws an exception
+
                 mHandler.postDelayed(mStatusChecker, mInterval);
             }
         }
@@ -164,7 +176,7 @@ Runnable mStatusChecker = new Runnable() {
     void stopRepeatingTask() {
         mHandler.removeCallbacks(mStatusChecker);
     }
-
+//Code for animating the clouds
     void updateStatus(){
         iv = (ImageView)findViewById(R.id.imageView2);
         iv1 = (ImageView)findViewById(R.id.imageView3);
