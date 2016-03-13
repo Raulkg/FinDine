@@ -1,5 +1,9 @@
 package info.theh2o.rahul.findine;
-
+//
+//        Heading  : FinDine Andorid Application
+//        Author.  : Rahulkumar Gaddam
+//        Purpose. : To find the restaurants in the city
+//      This class is to transfer the data from main acitivity to list activity . IMplemented the parcelable class to transfer data through bundle
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
